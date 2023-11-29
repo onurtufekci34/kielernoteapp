@@ -9,7 +9,7 @@ export default function Signup() {
 
   const { signup, isPending, error } = useSignup();
 
-  const hadnleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (password === confirmPassword) {
@@ -26,7 +26,7 @@ export default function Signup() {
   };
 
   return (
-    <form className="signup" onSubmit={hadnleSubmit}>
+    <form className="signup" onSubmit={handleSubmit}>
       <h3>Kieler Note App Signup Page</h3>
 
       <label>Your Name:</label>

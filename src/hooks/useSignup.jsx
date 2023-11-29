@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import {auth} from '../firebase/config'
 import {createUserWithEmailAndPassword,updateProfile} from 'firebase/auth'
-
+import {useAuthContext} from './useAuthContext'
 
 
 
@@ -10,6 +10,7 @@ export const useSignup=()=>{
 
     const [error,setError] = useState(null)
     const [ispending,setIspending] = useState(false)
+    const {dispatch} = useAuthContext();
 
     const signup = async (email,password,userName)=>{
         setError(null)
@@ -28,6 +29,8 @@ export const useSignup=()=>{
             updateProfile(response.user,{
                 displayName:userName
             })
+
+            dispatch({type:"LOGIN",payload:response.user})
 
             setIspending(false)
             setError(null)

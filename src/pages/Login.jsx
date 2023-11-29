@@ -9,7 +9,7 @@ export default function Login() {
     const [email,setEmail] = useState("")
     const [password,setPassword] = useState("")
     
-    const hadnleSubmit = async (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
 
         console.log(email,password)
@@ -20,7 +20,7 @@ export default function Login() {
 
 
   return (
-    <form className='login' onSubmit={hadnleSubmit}>
+    <form className='login' onSubmit={handleSubmit}>
         <h3>Kieler Note App Login Page</h3>
 
         <label>Your E-Mail:</label>
