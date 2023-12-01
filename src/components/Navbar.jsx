@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import { useLogout } from "../hooks/useLogout";
+import {useAuthContext} from '../hooks/useAuthContext'
 
 export default function Navbar() {
   const { logout } = useLogout();
+  const {user} = useAuthContext()
+
 
   return (
     <header>
@@ -11,14 +14,15 @@ export default function Navbar() {
           <h1>Kieler Notebook</h1>
         </Link>
         <nav>
-          <div>
+          {!user && (<div>
             <Link to="/login">Login</Link>
             <Link to="/signup">Signup</Link>
-          </div>
-          <div>
+          </div>)}
+          {user && (<div>
+            <span>{user.displayName.toUpperCase()}</span> &nbsp;
             <button onClick={logout}>Logout</button>
             
-          </div>
+          </div>)}
         </nav>
       </div>
     </header>
