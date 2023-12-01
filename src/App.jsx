@@ -6,11 +6,11 @@ import Signup from "./pages/Signup";
 import { useAuthContext } from "./hooks/useAuthContext";
 
 function App() {
-  const { autIsReady } = useAuthContext();
+  const { authIsReady } = useAuthContext();
 
   return (
     <div className="App">
-      {autIsReady && (
+      {authIsReady && (
         <BrowserRouter>
           <Navbar />
           <div className="pages">
