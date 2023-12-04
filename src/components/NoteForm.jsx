@@ -1,13 +1,15 @@
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
+import {useFirestore} from '../hooks/useFirestore'
 
 
 
 
-
-export default function NoteForm() {
+export default function NoteForm({uid}) {
 
     const [title,setTitle] = useState("")
     const [explanation, setExplanation] = useState("")
+
+    const {addDocument,response} =useFirestore('nots')
 
 
     const handleSubmit = async(e) =>{
@@ -15,11 +17,19 @@ export default function NoteForm() {
 
         const note = {title,explanation}
 
-        console.log(note)
-
-        setTitle("")
-        setExplanation("")
+        addDocument({
+          uid,
+          title,
+          explanation
+        })
     }
+
+    useEffect(()=>{
+      if(response.success){
+        setTitle('')
+        setExplanation('')
+      }
+    },[response.success])
 
 
 
