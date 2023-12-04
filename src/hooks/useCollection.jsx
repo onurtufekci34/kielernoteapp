@@ -22,7 +22,7 @@ export const useCollection = (koleksiyon) => {
       },
       (error) => {
         console.log(error.message);
-        setError("Verilere Erişilemedi");
+        setError("Data Could Not Be Accessed");
       }
     );
 
