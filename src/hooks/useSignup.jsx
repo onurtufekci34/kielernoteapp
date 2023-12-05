@@ -20,7 +20,7 @@ export const useSignup=()=>{
         try {
             
             const response = await createUserWithEmailAndPassword(auth,email,password)
-            console.log(response.user)
+            //console.log(response.user)
 
             if(!response){
                 throw new Error('Membership process was not completed')

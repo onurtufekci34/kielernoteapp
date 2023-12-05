@@ -39,8 +39,8 @@ header a {
 /* not-detay */
 .notlar {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
 }
 .not-detay {
   background: #fff;
@@ -87,7 +87,7 @@ display: block;
 form.create{
   display: block;
   
-  min-width: 1200px
+ 
 }
 
 .create-group
