@@ -6,11 +6,12 @@ import {useCollection} from '../hooks/useCollection'
 
 
 
+
 export default function Home() {
 
   
   const {user} = useAuthContext()
-  const {documents,error} = useCollection('nots')
+  const {documents,error} = useCollection('nots',["uid","==",user.uid],["date","desc"])
 
   //console.log("dokuman",documents)
 
