@@ -14,7 +14,7 @@ export default function NoteDetaild({ not }) {
       <h4>{not.title}</h4>
       <p>{not.explanation}</p>
       <p className="zaman">{moment(new Date(not.date.toDate())).format('L')}</p>
-      <span onClick={()=>deleteDocument(not.id)}>X</span>
+      <span onClick={()=>deleteDocument(not.id)} className='material-symbols-outlined'>delete_forever</span>
     </div>
   );
 }
