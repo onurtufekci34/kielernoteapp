@@ -42,11 +42,19 @@ header a {
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
 }
+
+@media screen and (max-width:431px){
+  .notlar {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
 .not-detay {
   background: #fff;
   border-radius: 4px;
   font-size:25px;
-
   padding: 20px;
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
