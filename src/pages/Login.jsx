@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLogin } from "../hooks/useLogin";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -32,6 +33,9 @@ export default function Login() {
         onChange={(e) => setPassword(e.target.value)}
         value={password}
       />
+      <p>
+          If you don not have a membership<Link className="link_to_signup" to="/signup"> Sign up</Link>
+        </p>
       {!isPending && <button>Login</button>}
       {isPending && <button disabled>processing</button>}
       {error && <div className="error">{error}</div>}
