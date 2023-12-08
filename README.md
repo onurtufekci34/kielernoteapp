@@ -6,7 +6,7 @@ This is a web application created using React, React-Router, Firebase, Custom Ho
 
 1. Clone the repository: `git clone https://github.com/ReDI-Cyberspace/Fall-FullStack-bootcamp.git`
 2. Navigate to the project directory: `cd project`
-3. Install dependencies: `npm install``
+3. Install dependencies: `npm install`
 
 ## How to Run
 
