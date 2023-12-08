@@ -51,6 +51,7 @@ pages/: Page components
 ## Screenshots
 
 ![Screenshot 1](/public/login.png)
+<br>
 ![Screenshot 2](/public/home.png)
 
 
