@@ -1,13 +1,12 @@
-# Creative Tech Shop
+# Kieler Note App
 
-This project is a web application built using React. 
+This is a web application created using React, React-Router, Firebase, Custom Hooks and Netlify used to save notes.
 
 ## Installation
 
 1. Clone the repository: `git clone https://github.com/ReDI-Cyberspace/Fall-FullStack-bootcamp.git`
 2. Navigate to the project directory: `cd project`
-3. Install dependencies: `npm install`
-4. Install json-server `npm install -g json-server`
+3. Install dependencies: `npm install``
 
 ## How to Run
 
